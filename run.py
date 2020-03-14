@@ -8,7 +8,7 @@ Script to run functions on the LED strip.
 import sys
 
 # Import led stuff.
-from led_strip.led_strip import LEDStrip, Color
+from led_strip import LEDStrip, Color
 
 
 def main(strip):
