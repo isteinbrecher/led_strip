@@ -6,6 +6,7 @@ Script to run functions on the LED strip.
 
 # Import python modules.
 import sys
+import time
 
 # Import led stuff.
 from led_strip import LEDStrip, Color
@@ -38,9 +39,11 @@ if __name__ == '__main__':
         # Run forever and wait for user input to cancel the script.
         print('to stop the program, press CRTL+C')
         while True:
-            pass
+            # Sleep here, because a simple pass would result in 100% load.
+            time.sleep(0.01)
 
     except KeyboardInterrupt:
         # Clear the strip, so all LEDs will be deactivated.
         strip.clear()
+        print('')
         sys.exit()
