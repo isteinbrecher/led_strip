@@ -42,7 +42,7 @@ if __name__ == '__main__':
             # Sleep here, because a simple pass would result in 100% load.
             time.sleep(0.01)
 
-    except KeyboardInterrupt:
+    except (KeyboardInterrupt, EOFError):
         # Clear the strip, so all LEDs will be deactivated.
         strip.clear()
         print('')
